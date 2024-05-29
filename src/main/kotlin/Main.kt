@@ -19,6 +19,10 @@ fun main() {
     println("Many similar: " + dataManySimilar.joinToString(" "))
 
 //    Sorted array
-    println("\nSorted data(bubblesort):" + bubbleSort.sort(dataShuffled).joinToString(" "))
+    println("\nSorted data(bubblesort):" + bubbleSort.sort(dataShuffled.copyOf()).joinToString(" "))
+    println(bubbleSort.results)
+    println("\nSorted data(bubblesort):" + bubbleSort.sort(dataShuffled.copyOf()).joinToString(" "))
+    println(bubbleSort.results)
+    println("\nSorted data(bubblesort):" + bubbleSort.sort(dataShuffled.copyOf()).joinToString(" "))
     println(bubbleSort.results)
 }

@@ -74,3 +74,7 @@ class DataGenerator {
         return list.toIntArray()
     }
 }
+
+fun main() {
+
+}
