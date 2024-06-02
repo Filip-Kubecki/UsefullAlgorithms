@@ -14,7 +14,7 @@ abstract class SortingAlgorithm {
         return array
     }
 
-//    Returns bigger value
+//    Returns true if first index is bigger than second one. Returns false for first index smaller or equal to second index
     fun compare(firstIndex: Int, secondIndex: Int, array: IntArray) : Boolean{
         return array[firstIndex] > array[secondIndex]
     }

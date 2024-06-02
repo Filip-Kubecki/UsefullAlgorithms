@@ -3,7 +3,7 @@ package SortingAlgorithms
 import java.util.Random
 
 class DataGenerator {
-//    TODO: Saw type (triangles), PipeOrgan (pyramid)
+//    TODO: Saw type array (triangles). Also add shuffleArray function that shuffles IntArray given as parameter
     fun shuffledArray(arraySize: Int) : IntArray {
         val array = IntArray(arraySize)
         for (i in 1..<arraySize) {
@@ -73,8 +73,17 @@ class DataGenerator {
 
         return list.toIntArray()
     }
-}
 
-fun main() {
+    fun pyramidArray(arraySize: Int) : IntArray {
+        val list = ArrayList<Int>()
 
+        for (i in arraySize - 1 downTo 0) {
+            if (i % 2 != 0){
+                list.add(i)
+            }else{
+                list.add(0,i)
+            }
+        }
+        return list.toIntArray()
+    }
 }
