@@ -9,12 +9,14 @@ class SelectionSort : SortingAlgorithm() {
         for (i in 0..array.size-1) {
             var smallestValueIndex = i
             for (j in i+1..array.size-1) {
+                comparisons++
                 if (compare(smallestValueIndex,j,array)){
                     smallestValueIndex = j
                 }
             }
             if (smallestValueIndex != i){
                 swap(smallestValueIndex,i,array)
+                swaps++
             }
         }
 
@@ -25,8 +27,10 @@ class SelectionSort : SortingAlgorithm() {
 }
 
 fun main() {
+    val sort = SelectionSort()
     val data1 = DataGenerator().shuffledArray(20)
     println(data1.joinToString(" "))
 
-    println(SelectionSort().sort(data1).joinToString(" "))
+    println(sort.sort(data1).joinToString(" "))
+    println(sort.results.toString())
 }
